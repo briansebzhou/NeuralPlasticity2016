@@ -26,8 +26,10 @@ import graupner_model as camod
 import brian_utils as bu
 import save_utils as svu
 
-import geometry as geom
+# import geometry as geom
+import Geometry as geom
 import sympy
+from sympy import oo as Inf
 
 import numpy.random as random
 import matplotlib

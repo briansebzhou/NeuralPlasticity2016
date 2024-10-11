@@ -22,16 +22,19 @@ sys.path.append(os.path.join(os.path.expanduser('~'), 'Dropbox/Ongoing.Projects/
 import brian_utils as bu
 import save_utils as svu
 import general_utils as gu
-from graphics_utils import plot_utils as pu
-from graphics_utils import customplots as cpt
+# from graphics_utils import plot_utils as pu
+import plot_utils as pu
+# from graphics_utils import customplots as cpt
+import customplotting as cpt
 
-import geometry as geom
+# import geometry as geom
 
 import numpy.random as random
 import matplotlib
 import matplotlib.patches as mpatches
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from scipy.interpolate import UnivariateSpline
+import sympy
 
 def tm_model(sim=False, syn_type='depressing', format='svg', data_dir='../data/', fig_dir='./', num_spk=1):
     # Plotting defaults

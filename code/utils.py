@@ -1,5 +1,6 @@
 import numpy as np
 import sympy
+from sympy.physics.units import Hz, second
 
 from brian2.core.functions import DEFAULT_FUNCTIONS, Function
 
