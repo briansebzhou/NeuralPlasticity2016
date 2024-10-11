@@ -540,8 +540,10 @@ def gliotransmitter_release(astro, params, ics=None, standalone=False, N_astro=1
 
     # Random initialization of initial conditions
     if ics=='rand':
-        synapses.x_A = 'rand()'
-        synapses.G_A = '1.2 * rho_e * G_T * rand()'
+        # synapses.x_A = 'rand()'
+        # synapses.G_A = '1.2 * rho_e * G_T * rand()'
+        group.x_A = 'rand()'
+        group.G_A = '1.2 * rho_e * G_T * rand()'
 
     return group
 

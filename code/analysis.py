@@ -436,7 +436,7 @@ def rr_mean(params, N_points=1, N_trials=1, freq_range=[0.1,100], gliot=False,
 
     if plot_results:
         # Retrieve mean unique values per trials
-        # rv = r_vals(mon.r_S_[:])
+        rv = r_vals(mon.r_S_[:])
         # rv = r_vals(mon['r_S'][:])
 
         # Effective plotting
@@ -617,7 +617,7 @@ def threshold_crossing(time,signal, threshold):
     else:
         return [], []
 
-def time_above_threshold(time,signal,thresholds={'Theta_d': 0.0, 'Theta_p': 0.1}):
+def time_above_threshold(time,signal,thresholds = {'Theta_d': 0.0, 'Theta_p': 0.1} ):
     '''
     Compute the average time above the two thresholds. This works correctly only in the case of Theta_d<Theta_p.
 
@@ -630,7 +630,7 @@ def time_above_threshold(time,signal,thresholds={'Theta_d': 0.0, 'Theta_p': 0.1}
     - Average time above the thresholds (dictionary)
     '''
     tat = {}
-    for thr in list(threhsolds.keys()):
+    for thr in list(thresholds.keys()):
         index = signal>=thr
         if sum(index)>0:
             if index[-1]: index[-1] = False

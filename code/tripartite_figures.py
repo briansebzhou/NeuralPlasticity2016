@@ -2143,7 +2143,7 @@ def plot_stdp_curves(Dt, C, W, params, duration, N_sim=1, mean_field=False,
             ax[1].plot((Dt[0], Dt[-1]), (0.0,0.0), c=color0, ls='-', lw=lw0)
             ax[1].plot((0.0, 0.0), (-15,15), c=color0, ls='-', lw=lw)
             for i in range(N_sim):
-                ax[1].plot(Dt, normalize(W['W'][i::N_sim][:,-1],params['W_0']), marker='o', color=colors[i], lw=lw0, zorder=zorder[i], alpha=alpha[i])
+                ax[1].plot(Dt, normalize(W['W'][i::N_sim][:,-1],params['W_0']), marker='o', color=color[i], lw=lw0, zorder=zorder[i], alpha=alpha[i])
         else:
             dw = stdp_curves_mean(Dt, C, params, duration, N_sim=N_sim)
             ax[1].plot((Dt[0], Dt[-1]), (0.0,0.0), c=color0, ls='-', lw=lw0)
